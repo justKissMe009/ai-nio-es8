@@ -3,16 +3,38 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.7.5</version>
+        <relativePath/> <!-- Lookup parent from the Maven repository -->
+    </parent>
+
     <groupId>com.example</groupId>
-    <artifactId>ai-nio-es8</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>spring-boot-hello</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-boot-hello</name>
+    <description>Demo project for Spring Boot</description>
+    <packaging>jar</packaging>
 
     <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <java.version>11</java.version>
     </properties>
 
     <dependencies>
-        <!-- Add your dependencies here -->
+        <!-- Spring Boot Starter Web -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
